@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3772ffb2-96db-4139-95c9-bcfdc1472231" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/api/fileexporter/ApiApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/api/fileexporter/controller/ExportDataController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/api/fileexporter/dto/ExportDataDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/api/fileexporter/entities/ExportData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/api/fileexporter/repository/ExportDataRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/api/fileexporter/service/ExportDataService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/api/fileexporter/ApiApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +17,18 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -110,6 +110,8 @@
       <updated>1715514559547</updated>
       <workItem from="1715514560538" duration="11112000" />
       <workItem from="1715548569947" duration="5703000" />
+      <workItem from="1715556710315" duration="16000" />
+      <workItem from="1715556734862" duration="15000" />
     </task>
     <servers />
   </component>
