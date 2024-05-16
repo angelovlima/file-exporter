@@ -13,8 +13,8 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity
-@Table(name = "export-data")
-public class ExportData {
+@Table(name = "example")
+public class Example {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
