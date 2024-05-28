@@ -3,9 +3,6 @@ package com.api.fileexporter.service;
 import com.api.fileexporter.dto.ExampleDTO;
 import com.api.fileexporter.entities.Example;
 import com.api.fileexporter.repository.ExampleRepository;
-import com.itextpdf.text.*;
-import com.itextpdf.text.log.Logger;
-import com.itextpdf.text.log.LoggerFactory;
 import jakarta.servlet.http.HttpServletResponse;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -14,6 +11,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFTable;
 import org.apache.poi.xwpf.usermodel.XWPFTableRow;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -21,13 +19,14 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.logging.Logger;
 
 @Service
 public class ExampleService {
 
     private final ExampleRepository exampleRepository;
     private final ExportFileService exportFileService;
-    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+//    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
 
     @Autowired
@@ -71,17 +70,17 @@ public class ExampleService {
         );
     }
 
-    public void exportPDF(HttpServletResponse response) throws IOException, DocumentException {
+    public void exportPDF(HttpServletResponse response) throws IOException {
         List<Example> exampleList = exampleRepository.findAll();
         List<ExampleDTO> dataList = exampleList.stream().map(this::toDTO).toList();
         exportFileService.exportPDF(response, dataList);
     }
 
-    public void exportCSV(HttpServletResponse response) throws IOException {
-        List<Example> exampleList = exampleRepository.findAll();
-        List<ExampleDTO> dataList = exampleList.stream().map(this::toDTO).toList();
-        exportFileService.exportCSV(response, dataList);
-    }
+//    public void exportCSV(HttpServletResponse response) throws IOException {
+//        List<Example> exampleList = exampleRepository.findAll();
+//        List<ExampleDTO> dataList = exampleList.stream().map(this::toDTO).toList();
+//        exportFileService.exportCSV(response, dataList);
+//    }
 
     @Deprecated
     public void exportWord(HttpServletResponse response) throws IOException {
@@ -109,7 +108,7 @@ public class ExampleService {
 
             document.write(response.getOutputStream());
         } catch (IOException e) {
-            logger.error("Erro ao exportar dados para Word", e);
+//            logger.error("Erro ao exportar dados para Word", e);
             throw new RuntimeException("Erro ao exportar dados para Word", e);
         }
     }

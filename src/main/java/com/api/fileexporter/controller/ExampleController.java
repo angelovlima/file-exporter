@@ -2,7 +2,6 @@ package com.api.fileexporter.controller;
 
 import com.api.fileexporter.dto.ExampleDTO;
 import com.api.fileexporter.service.ExampleService;
-import com.itextpdf.text.DocumentException;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -42,16 +41,16 @@ public class ExampleController {
 
     @GetMapping("/export/pdf")
     @ResponseStatus(HttpStatus.OK)
-    public void exportPDF(HttpServletResponse response) throws IOException, DocumentException {
+    public void exportPDF(HttpServletResponse response) throws IOException {
         exampleService.exportPDF(response);
 
     }
 
-    @GetMapping("/export/csv")
-    @ResponseStatus(HttpStatus.OK)
-    public void exportCSV(HttpServletResponse response) throws IOException {
-        exampleService.exportCSV(response);
-    }
+//    @GetMapping("/export/csv")
+//    @ResponseStatus(HttpStatus.OK)
+//    public void exportCSV(HttpServletResponse response) throws IOException {
+//        exampleService.exportCSV(response);
+//    }
 
     @GetMapping("/export/docx")
     @ResponseStatus(HttpStatus.OK)
